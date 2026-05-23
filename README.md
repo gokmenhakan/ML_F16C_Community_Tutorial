@@ -1,6 +1,3 @@
-# ML_F16C_Community_Tutorial
-F16C Community release site
-
 # ML_F16C Community Tutorial
 
 Community release repository for F-16C cockpit simulator panels and gauges for DCS World.
