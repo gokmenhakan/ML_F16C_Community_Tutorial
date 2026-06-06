@@ -50,12 +50,6 @@ Development branch:
 ML_F16_SPEEDBRAKE_Community
 ```
 
-Suggested release tag:
-
-```text
-v1.0-speedbrake-community
-```
-
 This release demonstrates a simplified Arduino Nano and SSD1306 128x64 I2C OLED based Speedbrake Position Indicator using DCS-BIOS for DCS World.
 
 It is based on the validated live Speedbrake sketch and provides a small cockpit-style indicator display showing the three main speedbrake states:
@@ -197,9 +191,8 @@ More ML_F16 community modules and build notes may be added over time.
 
 The next likely community/tutorial modules are:
 
-1. Speedbrake Indicator
-2. Angle of Attack Indicator
-3. Vertical Velocity Indicator
+1. Angle of Attack Indicator
+2. Vertical Velocity Indicator
 
 ---
 
