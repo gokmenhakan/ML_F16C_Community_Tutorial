@@ -52,6 +52,14 @@ ML_F16_SPEEDBRAKE_Community
 
 This release demonstrates a simplified Arduino Nano and SSD1306 128x64 I2C OLED based Speedbrake Position Indicator using DCS-BIOS for DCS World.
 
+Suggested release tag:
+
+```text
+v1.0-speedbrake-community
+```
+
+This release demonstrates a simplified Arduino Nano and SSD1306 128x64 I2C OLED based Speedbrake Position Indicator using DCS-BIOS for DCS World.
+
 It is based on the validated live Speedbrake sketch and provides a small cockpit-style indicator display showing the three main speedbrake states:
 
 ```text
@@ -94,6 +102,12 @@ Observed and validated raw-value behaviour:
 The repository is now in its early public community/tutorial phase.
 
 Current public community modules:
+
+* F-16C Fuel Flow Indicator Community Edition
+* F-16C Speedbrake Indicator Community Edition
+
+The focus of these releases is to provide working, understandable, and buildable examples rather than fully commercial cockpit products.
+
 
 * F-16C Fuel Flow Indicator Community Edition
 * F-16C Speedbrake Indicator Community Edition
