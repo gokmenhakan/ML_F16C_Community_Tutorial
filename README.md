@@ -197,9 +197,8 @@ More ML_F16 community modules and build notes may be added over time.
 
 The next likely community/tutorial modules are:
 
-1. Speedbrake Indicator
-2. Angle of Attack Indicator
-3. Vertical Velocity Indicator
+1. Angle of Attack Indicator
+2. Vertical Velocity Indicator
 
 ---
 
