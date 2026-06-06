@@ -103,6 +103,7 @@ This release demonstrates a simplified Arduino Nano and SSD1306 128x64 I2C OLED 
 Suggested release tag:
 
 ```text
+Release tag:
 v1.0-speedbrake-community
 ```
 
