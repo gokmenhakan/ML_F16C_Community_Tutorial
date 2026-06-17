@@ -1,60 +1,12 @@
 # ML_F16C Community Tutorial
 
-Community release repository for F-16C cockpit simulator panels and gauges for DCS World.
-
-## Current Release
-
-### F-16C Fuel Flow Indicator Community Edition V1
-
-This release provides a working Community Edition sketch for the F-16C Fuel Flow Indicator.
-
-## Target Hardware
-
-- Arduino Nano / ATmega328P
-- SH1106 128x64 I2C OLED display
-- Optional rear diagnostics button
-- USB serial connection to the DCS-BIOS host PC
-
-## Software Requirements
-
-- Arduino IDE
-- U8g2 library
-- Skunk Works DCS-BIOS fork
-- DCS-BIOS Bridge
-- DCS World F-16C
-
-## Included Features
-
-- Startup splash
-- Basic digit self-test
-- Standby mode
-- Live DCS-BIOS fuel-flow display
-- Stale-data indication
-- Simple rear-button diagnostics page
-- Local test mode
-- Public fuel-flow drum calibration table
-
-## Files
-
-- `FFI_Community_Release_FB.ino` — Arduino sketch
-- `Ml F16 Ffi Community Edition Guide with Code.pdf` — setup and usage guide
-
-## Important Notes
-
-This is a simplified Community Edition. Advanced prototype, service, diagnostics, and commercial/pro features are not included.
-
-## Disclaimer
-
-This project is a hobby cockpit-simulator component for use with DCS World. It is not affiliated with, endorsed by, or approved by Eagle Dynamics, Lockheed Martin, the United States Air Force, or any aircraft manufacturer/operator.
-
-Simulation and educational use only.
 Community release repository for F-16C cockpit simulator panels, gauges, indicators, and supporting build notes for DCS World.
 
 This repository contains simplified community and tutorial versions of selected ML_F16 cockpit simulator modules. The aim is to help other cockpit builders understand the basic hardware, wiring, display logic, and DCS-BIOS integration patterns used in small F-16C simulator panels.
 
 The community releases are intended to be understandable, buildable, and suitable for hobby cockpit builders who want to learn from working examples.
 
-They are not the full private development or commercial/prototype versions.
+They are not the full private development, prototype, or commercial/pro versions.
 
 ---
 
@@ -62,7 +14,7 @@ They are not the full private development or commercial/prototype versions.
 
 ### 1. F-16C Fuel Flow Indicator Community Edition
 
-Development branch:
+Development folder:
 
 ```text
 ML_F16_FFI_Community
@@ -74,7 +26,7 @@ Release tag:
 v1.0-ffi-community
 ```
 
-This release demonstrates a simplified Arduino Nano and OLED based Fuel Flow Indicator using DCS-BIOS for DCS World.
+This release demonstrates a simplified Arduino Nano and SH1106 128x64 I2C OLED based Fuel Flow Indicator using DCS-BIOS for DCS World.
 
 It includes:
 
@@ -87,29 +39,34 @@ It includes:
 * Standby, live, and stale-data states
 * Local test mode
 * Basic diagnostics page
+* Public fuel-flow drum calibration table
+
+Key files:
+
+```text
+FFI_Community_Release_FB.ino
+Ml F16 Ffi Community Edition Guide with Code.pdf
+```
 
 ---
 
 ### 2. F-16C Speedbrake Indicator Community Edition
 
-Development branch:
+Development folder:
 
 ```text
-ML_F16_SPEEDBRAKE_Community
+SPEEDBRAKE_Community_Edition
 ```
 
-This release demonstrates a simplified Arduino Nano and SSD1306 128x64 I2C OLED based Speedbrake Position Indicator using DCS-BIOS for DCS World.
-
-Suggested release tag:
+Release tag:
 
 ```text
-Release tag:
 v1.0-speedbrake-community
 ```
 
 This release demonstrates a simplified Arduino Nano and SSD1306 128x64 I2C OLED based Speedbrake Position Indicator using DCS-BIOS for DCS World.
 
-It is based on the validated live Speedbrake sketch and provides a small cockpit-style indicator display showing the three main speedbrake states:
+It provides a small cockpit-style indicator display showing the three main speedbrake states:
 
 ```text
 CLOSED  = diagonal striped indication
@@ -144,6 +101,64 @@ Observed and validated raw-value behaviour:
 60000 to 65535 = OPEN
 ```
 
+Key files:
+
+```text
+ML_F16_SPEEDBRAKE_COMMUNITY_V1_0.ino
+ML F16 SPEEDBRAKE Community EditionGuide.pdf
+ML F16 SPEEDBRAKE Community EditionGuide.docx
+```
+
+---
+
+### 3. F-16C Angle of Attack Indicator Community Edition
+
+Development folder:
+
+```text
+AOA_Community_Edition
+```
+
+Suggested release tag:
+
+```text
+v1.0-aoa-esp32d-community
+```
+
+This release demonstrates a simplified ESP32-D / ESP-WROOM-32 and 2.4 inch SPI TFT based Angle of Attack tape indicator using DCS-BIOS for DCS World.
+
+It is based on the validated ML_F16 AOA indicator work, but stripped for public community release. It does not include PanelReporter, PFLD, fleet reporting, pro build flags, commercial support hooks, or private ML_F16 service framework code.
+
+The community AOA release includes:
+
+* ESP32-D / ESP-WROOM-32 support
+* 2.4 inch SPI TFT display support
+* DCS-BIOS live AOA input
+* Vertical AOA tape display
+* Colour band rendering
+* OFF flag behaviour before valid data
+* Startup splash
+* Standby / waiting for DCS state
+* Live display state
+* Stale-data timeout handling
+* Rear diagnostic button support
+* Local test mode for bench testing without DCS
+* Public AOA calibration table
+* Documentation and build guide
+
+The AOA sketch uses the DCS-BIOS F-16C AOA output:
+
+```text
+F_16C_50_AOA_VALUE
+```
+
+Key files:
+
+```text
+ML_F16_AOA_INDICATOR_COMMUNITY.ino
+ML_F16_AOA_INDICATOR_COMMUNITY.docx
+```
+
 ---
 
 ## Project Status
@@ -154,12 +169,7 @@ Current public community modules:
 
 * F-16C Fuel Flow Indicator Community Edition
 * F-16C Speedbrake Indicator Community Edition
-
-The focus of these releases is to provide working, understandable, and buildable examples rather than fully commercial cockpit products.
-
-
-* F-16C Fuel Flow Indicator Community Edition
-* F-16C Speedbrake Indicator Community Edition
+* F-16C Angle of Attack Indicator Community Edition
 
 The focus of these releases is to provide working, understandable, and buildable examples rather than fully commercial cockpit products.
 
@@ -173,7 +183,7 @@ Planned and potential future community/tutorial releases include:
 
 * [x] F-16C Fuel Flow Indicator Community Edition
 * [x] F-16C Speedbrake Indicator Community Edition
-* [ ] F-16C Angle of Attack Indicator Community Edition
+* [x] F-16C Angle of Attack Indicator Community Edition
 * [ ] F-16C Vertical Velocity Indicator Community Edition
 * [ ] Basic STL/3MF builder packs for selected modules
 * [ ] Wiring diagrams and build notes
@@ -200,7 +210,7 @@ They do not include the full advanced prototype feature set used in private deve
 
 * advanced diagnostics
 * hidden service modes
-* advanced calibration tables
+* advanced calibration tools
 * commercial support tooling
 * advanced enclosure revisions
 * protected rendering or realism logic
@@ -217,7 +227,9 @@ The purpose is to provide enough working material for cockpit builders to build 
 Community modules currently use simple, low-cost hardware such as:
 
 * Arduino Nano or compatible ATmega328P board
+* ESP32-D / ESP-WROOM-32 board
 * Small I2C OLED displays
+* Small SPI TFT displays
 * USB serial connection to the DCS-BIOS host PC
 * Optional rear pushbuttons for diagnostics or local testing
 * 3D-printed or laser-cut mounting parts, where released
@@ -230,7 +242,7 @@ Exact hardware requirements are documented in each module guide.
 
 These community builds are designed for DCS World and the F-16C Viper module.
 
-They use DCS-BIOS to receive cockpit data from the simulator and drive external Arduino-based displays.
+They use DCS-BIOS to receive cockpit data from the simulator and drive external Arduino or ESP32 based displays.
 
 For best results, use a current F-16C capable DCS-BIOS fork and DCS-BIOS Bridge or equivalent serial connection method.
 
@@ -240,7 +252,7 @@ If a module remains in standby mode, check:
 * The F-16C is loaded
 * DCS-BIOS is installed correctly
 * DCS-BIOS Bridge is running
-* The correct Arduino COM port is selected
+* The correct Arduino or ESP32 COM port is selected
 * The Arduino Serial Monitor is not using the same port
 * The required F-16C DCS-BIOS control name exists in your installed fork
 
@@ -252,14 +264,15 @@ If you are interested in future F-16C cockpit simulator module releases, please 
 
 More ML_F16 community modules and build notes may be added over time.
 
-The next likely community/tutorial modules are:
+The next likely community/tutorial module is:
 
-1. Angle of Attack Indicator
-2. Vertical Velocity Indicator
+```text
+F-16C Vertical Velocity Indicator Community Edition
+```
 
 ---
 
-## Notes
+## Disclaimer
 
 This is an independent community cockpit-simulator project for hobby use.
 
