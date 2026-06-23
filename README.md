@@ -6,19 +6,21 @@ This repository contains simplified community and tutorial versions of selected 
 
 The community releases are intended to be understandable, buildable, and suitable for hobby cockpit builders who want to learn from working examples.
 
-They are not the full private development, prototype, or commercial/pro versions.
+They are simplified public releases, not the full private development, prototype, or commercial/pro versions.
 
 ---
 
 ## Current Community Releases
 
-### 1. F-16C Fuel Flow Indicator Community Edition
+| Module                          | Version | Hardware                                  | Release tag                 |
+| ------------------------------- | ------: | ----------------------------------------- | --------------------------- |
+| F-16C Fuel Flow Indicator       |    v1.0 | Arduino Nano + SH1106 128x64 I2C OLED     | `v1.0-ffi-community`        |
+| F-16C Speedbrake Indicator      |    v1.0 | Arduino Nano + SSD1306 128x64 I2C OLED    | `v1.0-speedbrake-community` |
+| F-16C Angle of Attack Indicator |    v1.0 | ESP32-D / ESP-WROOM-32 + 2.4-inch SPI TFT | `v1.0-aoa-esp32d-community` |
 
-Development folder:
+---
 
-```text
-ML_F16_FFI_Community
-```
+## 1. F-16C Fuel Flow Indicator Community Edition
 
 Release tag:
 
@@ -50,13 +52,7 @@ Ml F16 Ffi Community Edition Guide with Code.pdf
 
 ---
 
-### 2. F-16C Speedbrake Indicator Community Edition
-
-Development folder:
-
-```text
-SPEEDBRAKE_Community_Edition
-```
+## 2. F-16C Speedbrake Indicator Community Edition
 
 Release tag:
 
@@ -111,28 +107,22 @@ ML F16 SPEEDBRAKE Community EditionGuide.docx
 
 ---
 
-### 3. F-16C Angle of Attack Indicator Community Edition
+## 3. F-16C Angle of Attack Indicator Community Edition
 
-Development folder:
-
-```text
-AOA_Community_Edition
-```
-
-Suggested release tag:
+Release tag:
 
 ```text
 v1.0-aoa-esp32d-community
 ```
 
-This release demonstrates a simplified ESP32-D / ESP-WROOM-32 and 2.4 inch SPI TFT based Angle of Attack tape indicator using DCS-BIOS for DCS World.
+This release demonstrates a simplified ESP32-D / ESP-WROOM-32 and 2.4-inch SPI TFT based Angle of Attack tape indicator using DCS-BIOS for DCS World.
 
-It is based on the validated ML_F16 AOA indicator work, but stripped for public community release. It does not include PanelReporter, PFLD, fleet reporting, pro build flags, commercial support hooks, or private ML_F16 service framework code.
+It is based on the validated ML_F16 AOA indicator work, but stripped for public community release.
 
 The community AOA release includes:
 
 * ESP32-D / ESP-WROOM-32 support
-* 2.4 inch SPI TFT display support
+* 2.4-inch SPI TFT display support
 * DCS-BIOS live AOA input
 * Vertical AOA tape display
 * Colour band rendering
@@ -163,7 +153,7 @@ ML_F16_AOA_INDICATOR_COMMUNITY.docx
 
 ## Project Status
 
-The repository is now in its early public community/tutorial phase.
+The repository is in its early public community/tutorial phase.
 
 Current public community modules:
 
@@ -173,7 +163,7 @@ Current public community modules:
 
 The focus of these releases is to provide working, understandable, and buildable examples rather than fully commercial cockpit products.
 
-Advanced prototype, commercial, service, hidden diagnostics, calibration, enclosure, and protected development features are not included in the community editions.
+Advanced prototype, commercial, service, hidden diagnostics, advanced calibration tools, enclosure revisions, and protected development features are not included in the community editions.
 
 ---
 
@@ -189,6 +179,12 @@ Planned and potential future community/tutorial releases include:
 * [ ] Wiring diagrams and build notes
 * [ ] Additional OLED / TFT cockpit indicators
 * [ ] Additional ML_F16 panel and gauge examples
+
+The next likely community/tutorial module is:
+
+```text
+F-16C Vertical Velocity Indicator Community Edition
+```
 
 ---
 
@@ -252,9 +248,25 @@ If a module remains in standby mode, check:
 * The F-16C is loaded
 * DCS-BIOS is installed correctly
 * DCS-BIOS Bridge is running
-* The correct Arduino or ESP32 COM port is selected
+* The correct Arduino or ESP32 serial port is selected
 * The Arduino Serial Monitor is not using the same port
 * The required F-16C DCS-BIOS control name exists in your installed fork
+
+---
+
+## Builder Feedback
+
+If you build one of the modules and find an issue, useful feedback includes:
+
+* wiring corrections
+* library/version problems
+* DCS-BIOS control-name changes
+* display-driver issues
+* unclear instructions
+* missing diagrams
+* build photos or test results
+
+This kind of feedback is more useful than view counts because it shows whether the releases are understandable and buildable.
 
 ---
 
@@ -263,12 +275,6 @@ If a module remains in standby mode, check:
 If you are interested in future F-16C cockpit simulator module releases, please star the repository to follow the project.
 
 More ML_F16 community modules and build notes may be added over time.
-
-The next likely community/tutorial module is:
-
-```text
-F-16C Vertical Velocity Indicator Community Edition
-```
 
 ---
 
