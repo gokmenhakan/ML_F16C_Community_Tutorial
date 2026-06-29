@@ -12,11 +12,12 @@ They are simplified public releases, not the full private development, prototype
 
 ## Current Community Releases
 
-| Module                          | Version | Hardware                                  | Release tag                 |
-| ------------------------------- | ------: | ----------------------------------------- | --------------------------- |
-| F-16C Fuel Flow Indicator       |    v1.0 | Arduino Nano + SH1106 128x64 I2C OLED     | `v1.0-ffi-community`        |
-| F-16C Speedbrake Indicator      |    v1.0 | Arduino Nano + SSD1306 128x64 I2C OLED    | `v1.0-speedbrake-community` |
-| F-16C Angle of Attack Indicator |    v1.0 | ESP32-D / ESP-WROOM-32 + 2.4-inch SPI TFT | `v1.0-aoa-esp32d-community` |
+| Module                            | Version | Hardware                                      | Release tag                 |
+| --------------------------------- | ------: | --------------------------------------------- | --------------------------- |
+| F-16C Fuel Flow Indicator         |    v1.0 | Arduino Nano + SH1106 128x64 I2C OLED         | `v1.0-ffi-community`        |
+| F-16C Speedbrake Indicator        |    v1.0 | Arduino Nano + SSD1306 128x64 I2C OLED        | `v1.0-speedbrake-community` |
+| F-16C Angle of Attack Indicator   |    v1.0 | ESP32-D / ESP-WROOM-32 + 2.4-inch SPI TFT     | `v1.0-aoa-esp32d-community` |
+| F-16C Vertical Velocity Indicator |    v1.0 | ESP32-D / ESP-WROOM-32 + 2.4-inch ILI9341 TFT | `v1.0-vvi-community`        |
 
 ---
 
@@ -151,6 +152,54 @@ ML_F16_AOA_INDICATOR_COMMUNITY.docx
 
 ---
 
+## 4. F-16C Vertical Velocity Indicator Community Edition
+
+Release tag:
+
+```text
+v1.0-vvi-community
+```
+
+This release demonstrates a simplified ESP32-D / ESP-WROOM-32 and 2.4-inch 240x320 SPI TFT ILI9341 based Vertical Velocity Indicator using DCS-BIOS for DCS World.
+
+It is based on the validated ML_F16 VVI work and the approved Community v1.0.0 release.
+
+The community VVI release includes:
+
+* ESP32-D / ESP-WROOM-32 support
+* 2.4-inch 240x320 SPI TFT ILI9341 support
+* TFT_eSPI display support
+* Supplied TFT_eSPI setup file for repeatable configuration
+* DCS-BIOS live VVI input
+* Moving vertical velocity tape
+* Lookup-table VVI calibration
+* OFF flag behaviour before valid data
+* Standard ML_F16 startup splash
+* Standby / waiting for DCS state
+* Sync state
+* Live display state
+* Stale-data timeout handling
+* Rear diagnostic button support
+* Local test mode for bench testing without DCS
+* Documentation and build guide in DOCX and PDF format
+
+The VVI sketch uses the DCS-BIOS F-16C VVI output:
+
+```text
+F_16C_50_VVI
+```
+
+Key files:
+
+```text
+ML_F16_VVI_Community.ino
+ML_F16_VVI_COMMUNITY_EDITION_GUIDE.docx
+ML_F16_VVI_COMMUNITY_EDITION_GUIDE.pdf
+User_Setup_ML_F16_VVI_ESP32_ILI9341.h
+```
+
+---
+
 ## Project Status
 
 The repository is in its early public community/tutorial phase.
@@ -160,6 +209,7 @@ Current public community modules:
 * F-16C Fuel Flow Indicator Community Edition
 * F-16C Speedbrake Indicator Community Edition
 * F-16C Angle of Attack Indicator Community Edition
+* F-16C Vertical Velocity Indicator Community Edition
 
 The focus of these releases is to provide working, understandable, and buildable examples rather than fully commercial cockpit products.
 
@@ -174,7 +224,7 @@ Planned and potential future community/tutorial releases include:
 * [x] F-16C Fuel Flow Indicator Community Edition
 * [x] F-16C Speedbrake Indicator Community Edition
 * [x] F-16C Angle of Attack Indicator Community Edition
-* [ ] F-16C Vertical Velocity Indicator Community Edition
+* [x] F-16C Vertical Velocity Indicator Community Edition
 * [ ] Basic STL/3MF builder packs for selected modules
 * [ ] Wiring diagrams and build notes
 * [ ] Additional OLED / TFT cockpit indicators
@@ -183,7 +233,7 @@ Planned and potential future community/tutorial releases include:
 The next likely community/tutorial module is:
 
 ```text
-F-16C Vertical Velocity Indicator Community Edition
+To be confirmed
 ```
 
 ---
